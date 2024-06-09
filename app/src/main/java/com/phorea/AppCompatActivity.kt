@@ -23,7 +23,7 @@ class AppCompatActivity : AppCompatActivity() {
             Handler().postDelayed(Runnable {
                 val intent: Intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-
+//test
                 finish()
             }, 500)
             insets
