@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "252023666497",
+    "project_id": "phorea",
+    "storage_bucket": "phorea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252023666497:android:545138d11d17d2cfe1d3c0",
+        "android_client_info": {
+          "package_name": "com.phorea"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOMyIP3MGEF5q6GNYKzEExK67yabUp3RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
