@@ -9,7 +9,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nickname님 반가워요!"
+        android:text="(Nickname을 넣을 칸)님 반가워요!"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
@@ -17,13 +17,13 @@
 
     <TextView
         android:id="@+id/recentlyUploadedText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="최근에 올라온 포토존"
+        android:layout_width="176dp"
+        android:layout_height="45dp"
         android:layout_below="@id/welcomeText"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:textSize="18sp"/>
+        android:layout_marginTop="32dp"
+        android:text="최근에 올라온 포토존"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -45,7 +45,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="대구 팔공산"
+                android:text="temp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical"
                 android:textSize="16sp"/>
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="서울 한강"
+                android:text="temp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical"
                 android:textSize="16sp"/>
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="제주 애월 해변"
+                android:text="temp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical"
                 android:textSize="16sp"/>
