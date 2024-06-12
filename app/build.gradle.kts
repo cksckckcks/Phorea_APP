@@ -2,13 +2,9 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
-
-    // DB
-    //id("com.android.application")
     id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.plugin.parcelize") // Parcelize 플러그인 추가
 }
-
-
 
 android {
     namespace = "com.phorea"
@@ -42,12 +38,19 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+
+    buildFeatures {
+        compose = true // Compose 활성화
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3" // 최신 Compose 버전으로 교체
+    }
+
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
@@ -71,17 +74,27 @@ dependencies {
     // DB
     implementation(platform("com.google.firebase:firebase-bom"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation (platform("com.google.firebase:firebase-bom:31.2.0"))
-    implementation ("com.google.firebase:firebase-database-ktx")
-    implementation ("com.google.firebase:firebase-auth-ktx")
-    implementation ("com.google.firebase:firebase-firestore-ktx")
+    implementation(platform("com.google.firebase:firebase-bom:31.2.0"))
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
 
     // kakaoMap
-    implementation (files("libs/libDaumMapAndroid.jar"))
+    implementation(files("libs/libDaumMapAndroid.jar"))
 
     // Constraint Layout
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
+    // Jetpack Compose
+    implementation("androidx.compose.ui:ui:1.4.3")
+    implementation("androidx.compose.material:material:1.4.3")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
+    implementation("androidx.activity:activity-compose:1.4.0")
 
+    // 테스트 의존성
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.4.3")
+
+    // 디버깅 도구
+    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
 }
-
