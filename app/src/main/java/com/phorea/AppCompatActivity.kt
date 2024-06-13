@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-// 실행 시 로딩화면
+// 실행 시 로딩화면 (로고 뜨도록)
 class AppCompatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,6 @@ class AppCompatActivity : AppCompatActivity() {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-
 
             Handler().postDelayed(Runnable {
                 val intent: Intent = Intent(this, LoginActivity::class.java)
