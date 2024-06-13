@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyPostActivity">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="제목"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleEditText"
+        android:layout_margin="16dp"
+        android:hint="위치 (사진에 데이터가 있다면 자동)"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"/>
+
+    <EditText
+        android:id="@+id/tipsEditText"
+        android:layout_width="392dp"
+        android:layout_height="374dp"
+        android:layout_below="@id/locationEditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="포토존을 찾는 팁"
+        android:minHeight="150dp"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/selectPhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipsEditText"
+        android:layout_margin="16dp"
+        android:text="사진 선택"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/uploadPostButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectPhotoButton"
+        android:layout_margin="16dp"
+        android:text="게시물 수정"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_black_24dp"
+            android:contentDescription="@string/home"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search_black_24dp"
+            android:contentDescription="@string/search"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_post_black_24dp"
+            android:contentDescription="@string/post"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_map_black_24dp"
+            android:contentDescription="@string/map"/>
+    </LinearLayout>
+</RelativeLayout>
